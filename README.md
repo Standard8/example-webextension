@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/Standard8/example-webextension.svg?branch=master)](https://travis-ci.org/Standard8/example-webextension)
-[![Coverage Status](https://coveralls.io/repos/github/Standard8/example-webextension/badge.svg)](https://coveralls.io/github/Standard8/example-webextension)
+[![Coverage Status](https://coveralls.io/repos/github/Standard8/example-webextension/badge.svg?branch=master)](https://coveralls.io/github/Standard8/example-webextension?branch=master)
 
 This repository is intended as an example repository containing templates and good
 practices for creating a
