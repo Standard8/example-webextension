@@ -54,7 +54,7 @@ module.exports.promiseSetupDriver = () => {
 
   return promiseActualBinary(process.env.FIREFOX_BINARY || "firefox")
     .then(binaryLocation => options.setBinary(new firefox.Binary(binaryLocation)))
-    .then(() => builder.buildAsync())
+    .then(() => builder.build())
     .then(driver => {
       driver.setContext(Context.CHROME);
 
