@@ -35,40 +35,44 @@ describe("Example Add-on Functional Tests", function() {
       .then(text => assert.equal(text, "Visit Mozilla"));
   });
 
-  // XXX Currently failing, see
-  // https://github.com/mozilla/example-addon-repo/issues/1
-  it.skip("should open a webpage when the button is clicked", function() {
-    let windowHandles;
-
+  it("should open a webpage when the button is clicked", function() {
     return driver.getAllWindowHandles()
       .then(handles => assert.equal(1, 1))
-      .then(() => utils.promiseAddonButton(driver))
-      .then(button => button.click())
-      .then(() => driver.wait(function*() {
-        windowHandles = yield driver.getAllWindowHandles();
-        return windowHandles.length === 2;
-      }, 9000))
-      .then(() => driver.getAllWindowHandles())
-      .then(handles => {
-        windowHandles = handles;
-        return driver.getWindowHandle();
+      // Find the button, click it and check it opens a new tab.
+      .then(function*() {
+        let button = yield utils.promiseAddonButton(driver);
+
+        button.click();
+
+        return driver.wait(function*() {
+          let handles = yield driver.getAllWindowHandles();
+          return handles.length === 2;
+        }, 9000, "Should have opened a new tab.");
       })
-      .then(currentHandle => {
+      // Switch selenium to the new tab.
+      .then(function*() {
+        let handles = yield driver.getAllWindowHandles();
+
+        let currentHandle = yield driver.getWindowHandle();
+
         driver.setContext(Context.CONTENT);
         // Find the new window handle.
         let newWindowHandle = null;
-        for (const handle of windowHandles) {
+        for (const handle of handles) {
           if (handle !== currentHandle) {
             newWindowHandle = handle;
           }
         }
 
-        return driver.switchTo().window(newWindowHandle)
-          .then(() => driver.getCurrentUrl());
+        return driver.switchTo().window(newWindowHandle);
       })
-      .then(currentUrl => {
-        assert.equal(currentUrl, "https://www.mozilla.org/en-US/");
-        return Promise.resolve();
-      });
+      // Check the tab has loaded the right page.
+      // We use driver.wait to wait for the page to be loaded, as due to the click()
+      // we're not able to easily use the load listeners built into selenium.
+      .then(() => driver.wait(function*() {
+        let currentUrl = yield driver.getCurrentUrl();
+
+        return currentUrl === "https://www.mozilla.org/en-US/";
+      }, 5000, "Should have loaded mozilla.org"));
   });
 });
