@@ -31,7 +31,7 @@
     "sinon": "1.17.7",
     "sinon-chrome": "2.1.2",
     "npm-run-all": "4.0.1",
-    "selenium-webdriver": "3.0.1",
+    "selenium-webdriver": "3.1.0",
     "virtualenv": "0.3.1",
     "web-ext": "1.8.1"
   },
