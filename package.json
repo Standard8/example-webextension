@@ -17,7 +17,7 @@
     "eslint": "3.15.0",
     "eslint-plugin-json": "1.2.0",
     "eslint-plugin-mocha": "4.8.0",
-    "eslint-plugin-promise": "3.4.1",
+    "eslint-plugin-promise": "3.5.0",
     "fs-promise": "2.0.0",
     "fx-runner": "1.0.6",
     "geckodriver": "1.4.0",
