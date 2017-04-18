@@ -33,7 +33,7 @@
     "npm-run-all": "4.0.2",
     "selenium-webdriver": "3.1.0",
     "virtualenv": "0.3.1",
-    "web-ext": "1.8.1"
+    "web-ext": "1.9.0"
   },
   "permissions": {
     "multiprocess": true
