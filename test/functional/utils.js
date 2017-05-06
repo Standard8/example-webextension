@@ -7,7 +7,7 @@ require("geckodriver");
 let firefox = require("selenium-webdriver/firefox");
 let webdriver = require("selenium-webdriver");
 let FxRunnerUtils = require("fx-runner/lib/utils");
-let Fs = require("fs-promise");
+let Fs = require("mz/fs");
 let By = webdriver.By;
 let Context = firefox.Context;
 let until = webdriver.until;
