@@ -3,7 +3,7 @@
     "gecko": {
       "id": "examplewebextension@mozilla.org",
         "strict_min_version": "48.0",
-        "strict_max_version": "52.*"
+        "strict_max_version": "100.*"
     }
   },
   "background": {
