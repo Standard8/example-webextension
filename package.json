@@ -19,7 +19,7 @@
     "eslint-plugin-mocha": "4.11.0",
     "eslint-plugin-promise": "3.5.0",
     "fs-promise": "2.0.2",
-    "fx-runner": "1.0.6",
+    "fx-runner": "1.0.7",
     "geckodriver": "1.7.1",
     "karma": "1.7.0",
     "karma-coverage": "1.1.1",
