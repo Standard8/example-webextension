@@ -28,7 +28,7 @@
     "karma-mocha-reporter": "2.2.3",
     "mocha": "3.5.0",
     "mz": "2.6.0",
-    "sinon": "3.1.0",
+    "sinon": "3.2.1",
     "sinon-chrome": "2.2.1",
     "npm-run-all": "4.0.2",
     "selenium-webdriver": "3.5.0",
