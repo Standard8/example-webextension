@@ -30,7 +30,7 @@
     "mz": "2.6.0",
     "sinon": "3.2.1",
     "sinon-chrome": "2.2.1",
-    "npm-run-all": "4.0.2",
+    "npm-run-all": "4.1.0",
     "selenium-webdriver": "3.5.0",
     "virtualenv": "0.3.1",
     "web-ext": "2.0.0"
