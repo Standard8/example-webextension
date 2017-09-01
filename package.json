@@ -20,7 +20,7 @@
     "eslint-plugin-promise": "3.5.0",
     "fx-runner": "1.0.7",
     "geckodriver": "1.8.0",
-    "karma": "1.7.0",
+    "karma": "1.7.1",
     "karma-coverage": "1.1.1",
     "karma-coveralls": "1.1.2",
     "karma-firefox-launcher": "1.0.1",
