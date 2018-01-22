@@ -6,6 +6,8 @@ practices for creating a
 [WebExtension based add-on](https://developer.mozilla.org/Add-ons/WebExtensions)
 for Firefox.
 
+**Note: I'm no longer maintaining this repository. The concepts and tools here will likely continue to work. Having automated testing of your code is always a good idea.**
+
 # Aims
 
 The aim of this repository is to bring together tools and services into a
