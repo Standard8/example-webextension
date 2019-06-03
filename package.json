@@ -18,7 +18,7 @@
     "eslint-plugin-json": "1.2.0",
     "eslint-plugin-mocha": "4.11.0",
     "eslint-plugin-promise": "3.5.0",
-    "fx-runner": "1.0.7",
+    "fx-runner": "1.0.8",
     "geckodriver": "1.8.1",
     "karma": "1.7.1",
     "karma-coverage": "1.1.1",
